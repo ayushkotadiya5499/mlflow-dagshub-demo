@@ -38,7 +38,6 @@ with mlflow.start_run():
     plt.savefig('m.png')
 
     mlflow.log_metric('accuracy',acc)
-    mlflow.log_param('n_estimator',n)
     mlflow.log_param('max_depth',m)
     mlflow.log_artifact('m.png')
     mlflow.set_tag('authore','ayush1')
