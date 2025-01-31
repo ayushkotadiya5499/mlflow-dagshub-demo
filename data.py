@@ -9,7 +9,10 @@ from sklearn.datasets import make_classification
 import seaborn as sns
 from matplotlib import pyplot as plt
 
-mlflow.set_tracking_uri('http://127.0.0.0.1:5000')
+import dagshub
+dagshub.init(repo_owner='ayushkotadiya5499', repo_name='mlflow-dagshub-demo', mlflow=True)
+
+mlflow.set_tracking_uri('https://dagshub.com/ayushkotadiya5499/mlflow-dagshub-demo.mlflow')
 
 x,y=make_classification(n_classes=2,n_informative=2,n_redundant=2,n_samples=200,random_state=5)
 
